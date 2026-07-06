@@ -14,7 +14,9 @@ app.engine('hbs', engine(
 app.set('view engine', 'hbs');
 app.set('views', './src/views');
 
-routes.use(express.static('./src/public'));
+app.use(express.static('./src/public'));
+
+app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
