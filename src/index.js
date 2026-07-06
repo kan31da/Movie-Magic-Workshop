@@ -3,19 +3,24 @@ import { engine } from 'express-handlebars';
 
 const app = express();
 
-app.engine('hbs', engine());
+app.engine('hbs', engine(
+    {
+        extname: 'hbs',
+        // defaultLayout: 'main',
+        // layoutsDir: './src/views/layouts/',
+    }
+));
 app.set('view engine', 'hbs');
 app.set('views', './src/views');
 
 app.use(express.static('./src/public'));
 
 app.get('/', (req, res) => {
-
-    res.render('home', { layout: false, title: 'Home Page' });
+    res.render('home', { title: 'Home Page' });
 });
 
 app.get('/about', (req, res) => {
-    res.render('about', { layout: false, title: 'About Page' });
+    res.render('about', { title: 'About Page' });
 });
 
 app.listen(3000, () => {
