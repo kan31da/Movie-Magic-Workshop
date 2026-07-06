@@ -1,0 +1,31 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "title": "Jungle Cruise",
+            "genre": "Adventure",
+            "image": "/img/jungle-cruise.jpeg",
+            "alt": "Jungle-Cruise",
+            "description": "Dreaming about saving countless lives and having another adventure, the feisty English feminist and doctor of botany, Dr. Lily Houghton, embarks on a peril-laden mission to change the world. Along with her fashionable brother, MacGregor, Dr. Houghton enlists the help of the arrogant, wisecracking riverboat skipper, Captain Frank Wolff, to guide them through the serpentine Amazon River in La Quila. As they venture deeper into the jungle, a centuries-old curse and the ruthless Prince Joachim threaten their mission.",
+            "detailsUrl": "#"
+        },
+        {
+            "id": 2,
+            "title": "The Little Mermaid",
+            "genre": "Fantasy",
+            "image": "/img/the-little-mermaid.jpg",
+            "alt": "The-Little-Mermaid",
+            "description": "The youngest of King Triton's daughters, Ariel is a beautiful and spirited young mermaid with a thirst for adventure. Longing to learn more about the world beyond the sea, she falls in love with Prince Eric and makes a dangerous deal with the sea witch Ursula to experience life on land.",
+            "detailsUrl": "#"
+        },
+        {
+            "id": 3,
+            "title": "Home Alone",
+            "genre": "Comedy",
+            "image": "/img/home-alone.jpeg",
+            "alt": "Home-Alone",
+            "description": "When his family accidentally leaves him behind during their Christmas vacation, young Kevin McCallister enjoys having the house to himself. His fun is interrupted when two burglars attempt to rob the house, forcing Kevin to defend his home with a series of clever booby traps.",
+            "detailsUrl": "#"
+        }
+    ]
+}
