@@ -1,11 +1,16 @@
-import movieRepository from '../repositories/movieRepository.js';
+import movieRepository from "../repositories/movieRepository.js";
 
-async function getAllMovies() {
-    return movieRepository.getAllMovies();
+function getAll() {
+    return movieRepository.getAll()
+}
+
+function create(movieData) {
+    return movieRepository.create(movieData);
 }
 
 const movieService = {
-    getAllMovies
-};  
+    getAll,
+    create,
+};
 
 export default movieService;

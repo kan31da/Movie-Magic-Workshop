@@ -1,18 +1,18 @@
 import { Router } from 'express';
+import movieService from '../services/movieService.js';
 
 const movieController = Router();
 
 movieController.get('/create', (req, res) => {
-    res.render('movies/create', { title: 'Create Movie' });
+    res.render('movies/create');
 });
 
-movieController.post('/create', (req, res) => {
+movieController.post('/create', async (req, res) => {
+    const newMovie = req.body;
 
-    const { title, category, genre, director, year, image, rating, description } = req.body;
-
-    console.log({ title, category, genre, director, year, image, rating, description });
-
+    await movieService.create(newMovie);
     
+    res.redirect('/');
 });
 
 export default movieController;
