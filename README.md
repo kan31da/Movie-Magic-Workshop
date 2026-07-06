@@ -9,7 +9,7 @@ Workshop
  - [x] Config debugging and dev script
  - [x] Add Workshop Resources
  - [x] Setup Handlebars `npm i express-handlebars`
- - [ ] Setup static files
+ - [x] Setup static files
  - [ ] Render Home Page
  - [ ] Render About Page
  - [ ] Add Layout
