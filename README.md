@@ -15,11 +15,11 @@ Workshop
  - [x] Add Layout
 ### Architecture and dynamic rendering
  - [x] Add home controller
- - [ ] Add movie data layer
- - [ ] Add movie service
- - [ ] Render single movie on home page
- - [ ] Render all movies on home page
- - [ ] Show no movies screen
+ - [x] Add movie data layer
+ - [x] Add movie service
+ - [x] Render single movie on home page
+ - [x] Render all movies on home page
+ - [x] Show no movies screen
 ### Create Movie
  - [ ] Add Movie Controller
  - [ ] Show create movie page
