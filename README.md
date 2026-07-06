@@ -10,9 +10,9 @@ Workshop
  - [x] Add Workshop Resources
  - [x] Setup Handlebars `npm i express-handlebars`
  - [x] Setup static files
- - [ ] Render Home Page
- - [ ] Render About Page
- - [ ] Add Layout
+ - [x] Render Home Page
+ - [x] Render About Page
+ - [x] Add Layout
 ### Architecture and dynamic rendering
  - [ ] Add home controller
  - [ ] Add movie data layer
