@@ -1,31 +1,43 @@
 {
   "movies": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Jungle Cruise",
       "genre": "Adventure",
       "image": "/img/jungle-cruise.jpeg",
       "alt": "Jungle-Cruise",
       "description": "Dreaming about saving countless lives and having another adventure, the feisty English feminist and doctor of botany, Dr. Lily Houghton, embarks on a peril-laden mission to change the world. Along with her fashionable brother, MacGregor, Dr. Houghton enlists the help of the arrogant, wisecracking riverboat skipper, Captain Frank Wolff, to guide them through the serpentine Amazon River in La Quila. As they venture deeper into the jungle, a centuries-old curse and the ruthless Prince Joachim threaten their mission.",
-      "detailsUrl": "#"
+      "detailsUrl": "#",
+      "rating": "3",
+      "year": "2021",
+      "director": "Jaume Collet-Serra",
+      "category": "adventure"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "The Little Mermaid",
       "genre": "Fantasy",
       "image": "/img/the-little-mermaid.jpg",
       "alt": "The-Little-Mermaid",
       "description": "The youngest of King Triton's daughters, Ariel is a beautiful and spirited young mermaid with a thirst for adventure. Longing to learn more about the world beyond the sea, she falls in love with Prince Eric and makes a dangerous deal with the sea witch Ursula to experience life on land.",
-      "detailsUrl": "#"
+      "detailsUrl": "#",
+      "rating": "4",
+      "year": "2023",
+      "director": "Rob Marshall",
+      "category": "fantasy"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Home Alone",
       "genre": "Comedy",
       "image": "/img/home-alone.jpeg",
       "alt": "Home-Alone",
       "description": "When his family accidentally leaves him behind during their Christmas vacation, young Kevin McCallister enjoys having the house to himself. His fun is interrupted when two burglars attempt to rob the house, forcing Kevin to defend his home with a series of clever booby traps.",
-      "detailsUrl": "#"
+      "detailsUrl": "#",
+      "rating": "5",
+      "year": "2019",
+      "director": "Chris Columbus",
+      "category": "comedy"
     },
     {
       "title": "1",
@@ -37,6 +49,17 @@
       "rating": "1",
       "description": "1",
       "id": "1783364275288"
+    },
+    {
+      "title": "2",
+      "category": "animation",
+      "genre": "2",
+      "director": "2",
+      "year": "2",
+      "image": "2",
+      "rating": "2",
+      "description": "2",
+      "id": "e9f5362b-e575-4759-bf90-86595e0c3e19"
     }
   ]
 }

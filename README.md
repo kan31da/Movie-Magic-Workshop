@@ -31,26 +31,26 @@ Workshop
    - [x] Add service
    - [x] Add repository
  - [x] Redirect after creation
- - [ ] Add unique if for each cerated movie
+ - [x] Add unique if for each cerated movie
 ### Details
- - [ ] Add navigation button for detail page
- - [ ] Add route with param for details page 
- - [ ] GetOne movie from service
- - [ ] Find movie by id from repository
- - [ ] Render details page with dynamic data
+ - [x] Add navigation button for detail page
+ - [x] Add route with param for details page 
+ - [x] GetOne movie from service
+ - [x] Find movie by id from repository
+ - [x] Render details page with dynamic data
 ### Search
- - [ ] Show static search page
- - [ ] Render all movies
- - [ ] Modify search form
- - [ ] Filter movies
-   - [ ] By year
-   - [ ] By genre
-   - [ ] By title 
- - [ ] Remember search words
+ - [x] Show static search page
+ - [x] Render all movies
+ - [x] Modify search form
+ - [x] Filter movies
+   - [x] By year
+   - [x] By genre
+   - [x] By title 
+ - [x] Remember search words
 ### Bonuses
- - [ ] Dynamic page title (basic)
- - [ ] Rating (temp solution)
- - [ ] File Persistance
+ - [x] Dynamic page title (basic)
+ - [x] Rating (temp solution)
+ - [x] File Persistance
 
 ## Workshop 2 - PostgreSQL and Prisma
 
