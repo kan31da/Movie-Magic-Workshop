@@ -1,24 +1,26 @@
 import { prisma } from '../lib/prisma';
 
 async function getAll(filter = {}) {
-    let movies = await prisma.movie.findMany();
-
-
-    //TODO TODO TODO implement database filtering
 
     if (filter.search) {
-        movies = movies.filter(movie => movie.title.toLowerCase().includes(filter.search.toLowerCase()));
+        return await prisma.movie.findMany({
+            where: { title: filter.search },
+        });
     }
 
     if (filter.genre) {
-        movies = movies.filter(movie => movie.genre.toLowerCase() === filter.genre.toLowerCase());
+        return await prisma.movie.findMany({
+            where: { genre: filter.genre },
+        });
     }
 
     if (filter.year) {
-        movies = movies.filter(movie => movie.year === filter.year);
+        return await prisma.movie.findMany({
+            where: { year: filter.year },
+        });
     }
 
-    return movies;
+    return await prisma.movie.findMany();;
 }
 
 async function create(movieData) {
