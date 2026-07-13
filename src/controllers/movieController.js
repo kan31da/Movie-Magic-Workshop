@@ -10,6 +10,7 @@ movieController.get('/create', (req, res) => {
 
 movieController.get('/search', async (req, res) => {
     const filter = req.query || '';
+
     const movies = await movieService.getAll(filter);
 
     res.render('movies/search', { title: 'Search Results', movies: movies, filter: filter || '' });
@@ -26,6 +27,9 @@ movieController.post('/create', async (req, res) => {
 
 movieController.get('/:movieId', async (req, res) => {
     const movieId = req.params.movieId;
+
+    console.log("Controller movieId:", req.params.movieId);
+
     const movie = await movieService.getById(movieId);
 
     const rating = Number(movie.rating);
@@ -39,10 +43,18 @@ movieController.get('/:movieId/attach', async (req, res) => {
 
     const movie = await movieService.getById(movieId);
 
-    // const artists = await artistService.getAll({ exclude: movie.artists.map(artist => artist.id) });
-    const artists = await artistService.getAll();
+    const artists = await artistService.getAll({ exclude: movie.artists.map(artist => artist.id) });
 
     res.render('movies/attach', { title: 'Attach Movie', movie, artists });
+});
+
+movieController.post('/:movieId/attach', async (req, res) => {
+    const movieId = req.params.movieId;
+    const artistId = req.body.artist;
+
+    await movieService.attachArtist(movieId, artistId);
+
+    res.redirect(`/movies/${movieId}`);
 });
 
 

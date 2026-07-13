@@ -95,18 +95,18 @@ Workshop
  - [x] Add page view
  - [x] Add dynamic data
  - [x] Populate artist select
- - [ ] Attach function
+ - [x] Attach function
 
 ### Show Artists on Details Page
- - [ ] Modify details view
- - [ ] Link to attach page
- - [ ] Show dynamic cast
+ - [x] Modify details view
+ - [x] Link to attach page
+ - [x] Show dynamic cast
 
 ### Bonuses
- - [ ] Show filtered artists in attach page
- - [ ] Search filter in db
- - [ ] Name in movie (Explicit Many-to-Many)
- - [ ] Modify service export
+ - [x] Show filtered artists in attach page
+ - [x] Search filter in db
+ - [x] Name in movie (Explicit Many-to-Many)
+ - [x] Modify service export
 
 ## Workshop 3 - Session and Authentication
 

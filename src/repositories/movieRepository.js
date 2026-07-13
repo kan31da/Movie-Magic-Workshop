@@ -2,25 +2,22 @@ import { prisma } from '../lib/prisma';
 
 async function getAll(filter = {}) {
 
-    if (filter.search) {
-        return await prisma.movie.findMany({
-            where: { title: filter.search },
-        });
-    }
+    const movies = await prisma.movie.findMany({
+        where: {
+            year: filter.year || undefined,
+            genre: {
+                //equals: filter.genre,
+                contains: filter.genre || undefined,
+                mode: 'insensitive'
+            },
+            title: {
+                contains: filter.search,
+                mode: 'insensitive'
+            },
+        }
+    });
 
-    if (filter.genre) {
-        return await prisma.movie.findMany({
-            where: { genre: filter.genre },
-        });
-    }
-
-    if (filter.year) {
-        return await prisma.movie.findMany({
-            where: { year: filter.year },
-        });
-    }
-
-    return await prisma.movie.findMany();;
+    return movies;
 }
 
 async function create(movieData) {
@@ -34,6 +31,9 @@ async function create(movieData) {
 async function getById(movieId) {
     const movie = await prisma.movie.findUnique({
         where: { id: movieId },
+        include: {
+            artists: true
+        }
     });
 
     if (!movie) {
@@ -51,11 +51,25 @@ async function deleteById(movieId) {
     return movie;
 }
 
+async function attachArtist(movieId, artistId) {
+    const result = await prisma.movie.update({
+        where: { id: movieId },
+        data: {
+            artists: {
+                connect: { id: artistId }
+            }
+        }
+    });
+
+    return result;
+}
+
 const movieRepository = {
     getAll,
     create,
     getById,
     deleteById,
+    attachArtist,
 };
 
 export default movieRepository;

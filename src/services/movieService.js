@@ -1,23 +1,24 @@
 import movieRepository from "../repositories/movieRepository.js";
 
-function getAll(filter = {}) {
+async function getAll(filter = {}) {
 
     if (filter.year) {
         filter.year = Number(filter.year);
     }
-    return movieRepository.getAll(filter)
+    return await movieRepository.getAll(filter)
 }
 
-function create(movieData) {
+async function create(movieData) {
     movieData.rating = Number(movieData.rating);
     movieData.year = Number(movieData.year);
 
-    return movieRepository.create(movieData);
+    return await movieRepository.create(movieData);
 }
 
-function getById(movieId) {
+async function getById(movieId) {    
     const id = Number(movieId);
-    return movieRepository.getById(id);
+
+    return await movieRepository.getById(id);
 }
 
 function deleteById(movieId) {
@@ -25,11 +26,21 @@ function deleteById(movieId) {
     return movieRepository.deleteById(id);
 }
 
+async function attachArtist(movieId, artistId) {
+    const movieIdNumber = Number(movieId);
+    const artistIdNumber = Number(artistId);
+
+    const result = await movieRepository.attachArtist(movieIdNumber, artistIdNumber);
+
+    return result;
+}
+
 const movieService = {
     getAll,
     create,
     getById,
     deleteById,
+    attachArtist,
 };
 
 export default movieService;
