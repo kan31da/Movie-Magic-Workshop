@@ -43,10 +43,19 @@ async function getById(movieId) {
     return movie;
 }
 
+async function deleteById(movieId) {
+    const movie = await prisma.movie.delete({
+        where: { id: movieId },
+    });
+
+    return movie;
+}
+
 const movieRepository = {
     getAll,
     create,
     getById,
+    deleteById,
 };
 
 export default movieRepository;

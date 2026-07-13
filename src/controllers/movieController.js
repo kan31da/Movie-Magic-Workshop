@@ -33,4 +33,10 @@ movieController.get('/details/:id', async (req, res) => {
     res.render('movies/details', { title: 'Movie Details', movie, stars });
 });
 
+movieController.delete('/delete/:id', async (req, res) => {
+    const movieId = req.params.id;
+    await movieService.deleteById(movieId);
+    res.redirect('/');
+});
+
 export default movieController;

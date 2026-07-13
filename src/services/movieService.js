@@ -20,10 +20,16 @@ function getById(movieId) {
     return movieRepository.getById(id);
 }
 
+function deleteById(movieId) {
+    const id = Number(movieId);
+    return movieRepository.deleteById(id);
+}
+
 const movieService = {
     getAll,
     create,
     getById,
+    deleteById,
 };
 
 export default movieService;
