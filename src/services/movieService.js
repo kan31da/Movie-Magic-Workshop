@@ -5,6 +5,9 @@ function getAll(filter = {}) {
 }
 
 function create(movieData) {
+    movieData.rating = Number(movieData.rating);
+    movieData.year = Number(movieData.year);
+
     return movieRepository.create(movieData);
 }
 
