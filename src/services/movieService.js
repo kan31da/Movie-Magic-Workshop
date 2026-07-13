@@ -12,7 +12,8 @@ function create(movieData) {
 }
 
 function getById(movieId) {
-    return movieRepository.getById(movieId);
+    const id = Number(movieId);
+    return movieRepository.getById(id);
 }
 
 const movieService = {

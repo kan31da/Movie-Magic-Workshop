@@ -74,8 +74,8 @@ Workshop
 ### Refactor Movies
  - [x] Remove uuid
  - [x] Create Movie
- - [ ] Read all movies
- - [ ] Movie details page 
+ - [x] Read all movies
+ - [x] Movie details page 
  - [ ] Remove file persistance related code
 
 ### Artist

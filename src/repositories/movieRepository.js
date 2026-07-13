@@ -23,7 +23,7 @@ async function getAll(filter = {}) {
 
 
     //TODO TODO TODO implement database filtering
-    
+
     if (filter.search) {
         movies = movies.filter(movie => movie.title.toLowerCase().includes(filter.search.toLowerCase()));
     }
@@ -47,10 +47,16 @@ async function create(movieData) {
     return movie;
 }
 
-async function getById(id) {
-    const movies = await readDb('movies');
+async function getById(movieId) {
+    const movie = await prisma.movie.findUnique({
+        where: { id: movieId },
+    });
 
-    return movies.find((movie) => movie.id === id);
+    if (!movie) {
+        throw new Error('No movies found!');
+    }
+
+    return movie;
 }
 
 const movieRepository = {
