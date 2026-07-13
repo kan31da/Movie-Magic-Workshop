@@ -55,21 +55,21 @@ Workshop
 ## Workshop 2 - PostgreSQL and Prisma
 
 ### Prerequisites
- - [ ] PostgreSQL Installed `psql --version`
- - [ ] GUI Client 
+ - [x] PostgreSQL Installed `psql --version`
+ - [x] GUI Client 
 
 ### Setup Database
- - [ ] Install and setup typescript support
- - [ ] Change npm start script to use tsx `tsx --watch src/index.js`
- - [ ] Install prisma related packages
- - [ ] Initialize prisma `npx prisma init --output ../generated/prisma`
- - [ ] Add database_url env variable
- - [ ] Generate first client `npx prisma generate`
- - [ ] Instantiate prisma client
+ - [x] Install and setup typescript support
+ - [x] Change npm start script to use tsx `tsx --watch src/index.js`
+ - [x] Install prisma related packages
+ - [x] Initialize prisma `npx prisma init --output ../generated/prisma`
+ - [x] Add database_url env variable
+ - [x] Generate first client `npx prisma generate`
+ - [x] Instantiate prisma client
 
 ### Setup models
- - [ ] Add Movie model
- - [ ] Migrate database `npx prisma migrate dev --name add_movies_table` or `npx prisma db push`
+ - [x] Add Movie model
+ - [x] Migrate database `npx prisma migrate dev --name add_movies_table` or `npx prisma db push`
 
 ### Refactor Movies
  - [ ] Remove uuid
@@ -107,3 +107,57 @@ Workshop
  - [ ] Search filter in db
  - [ ] Name in movie (Explicit Many-to-Many)
  - [ ] Modify service export
+
+## Workshop 3 - Session and Authentication
+
+### Intro
+ - [ ] Add resources
+
+### Register
+ - [ ] Add auth controller
+ - [ ] Add register page
+ - [ ] Add register post action
+ - [ ] Add service
+ - [ ] Add repository
+ - [ ] Add model
+ - [ ] Hash password `npm i bcrypt`
+
+### Login
+ - [ ] Add login page
+ - [ ] Add login post action
+ - [ ] Add login service method
+ - [ ] Add findByEmail repository method
+ - [ ] Validate password
+ - [ ] Issue JWT token `npm i jsonwebtoken`
+ - [ ] Return token in cookie
+
+### Logout
+ - [ ] Add logout action
+ - [ ] Use logout on invalid token
+
+### Authentication & Authorization
+ - [ ] Create auth middleware
+ - [ ] Setup cookie parser
+ - [ ] Validate token
+ - [ ] Add isAuthenticated guard
+ - [ ] Add isGuest guard
+ 
+### Edit and Delete Movies
+ - [ ] Add user movies relation
+ - [ ] Add owner on movie create
+ - [ ] Show dynamic details buttons
+ - [ ] Implement delete button
+ - [ ] Add static edit page
+ - [ ] Add dynamic values to edit page
+ - [ ] Implement edit on post
+
+### Dynamic Navigation
+ - [ ] Show dynamic navigation based on user session
+
+### Bonuses
+ - [ ] Validate repeat password
+ - [ ] Automatic login on register
+ - [ ] Fix secret
+ - [ ] Fix select on edit
+ - [ ] Make token generation async
+ - [ ] Fix rating
