@@ -23,8 +23,8 @@ movieController.post('/create', async (req, res) => {
     res.redirect('/');
 });
 
-movieController.get('/details/:id', async (req, res) => {
-    const movieId = req.params.id;
+movieController.get('/:movieId', async (req, res) => {
+    const movieId = req.params.movieId;
     const movie = await movieService.getById(movieId);
 
     const rating = Number(movie.rating);
@@ -33,8 +33,13 @@ movieController.get('/details/:id', async (req, res) => {
     res.render('movies/details', { title: 'Movie Details', movie, stars });
 });
 
-movieController.delete('/delete/:id', async (req, res) => {
-    const movieId = req.params.id;
+movieController.get('/:movieId/attach', async (req, res) => {
+    res.render('movies/attach', { title: 'Attach Movie' });
+});
+
+
+movieController.delete('/delete/:movieId', async (req, res) => {
+    const movieId = req.params.movieId;
     await movieService.deleteById(movieId);
     res.redirect('/');
 });
