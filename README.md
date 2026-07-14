@@ -111,15 +111,15 @@ Workshop
 ## Workshop 3 - Session and Authentication
 
 ### Intro
- - [ ] Add resources
+ - [x] Add resources
 
 ### Register
- - [ ] Add auth controller
- - [ ] Add register page
- - [ ] Add register post action
- - [ ] Add service
- - [ ] Add repository
- - [ ] Add model
+ - [x] Add auth controller
+ - [x] Add register page
+ - [x] Add register post action
+ - [x] Add service
+ - [x] Add repository
+ - [x] Add model
  - [ ] Hash password `npm i bcrypt`
 
 ### Login

@@ -77,11 +77,11 @@ async function main() {
     await prisma.movie.createMany({
         data: [
             {
-                title: "Movie One",
+                title: "One",
                 category: "Action",
                 genre: "Thriller",
                 director: "Director One",
-                year: 2020,
+                year: 2000,
                 imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF0EZ5oR6EmNWeGTv9zROhLFuVyesO6H-XuJdweBAacg&s=10",
                 rating: 4.5,
                 description: "An exciting action movie.",
