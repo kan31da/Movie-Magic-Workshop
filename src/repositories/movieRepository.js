@@ -43,14 +43,6 @@ async function getById(movieId) {
     return movie;
 }
 
-async function deleteById(movieId) {
-    const movie = await prisma.movie.delete({
-        where: { id: movieId },
-    });
-
-    return movie;
-}
-
 async function attachArtist(movieId, artistId) {
     const result = await prisma.movie.update({
         where: { id: movieId },
@@ -64,12 +56,30 @@ async function attachArtist(movieId, artistId) {
     return result;
 }
 
+async function edit(movieId, userId, editMovie) {
+    const movie = await prisma.movie.update({
+        where: { id: movieId, userId: userId },
+        data: {
+            ...editMovie,
+        }
+    })
+
+    return movie;
+}
+
+async function deleteById(movieId, userId) {
+    await prisma.movie.delete({
+        where: { id: movieId, userId: userId },
+    });
+}
+
 const movieRepository = {
     getAll,
     create,
     getById,
-    deleteById,
     attachArtist,
+    edit,
+    deleteById,
 };
 
 export default movieRepository;

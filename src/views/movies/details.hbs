@@ -27,11 +27,13 @@
                 <p class="card-category">Category: {{movie.category}}</p>
             </div>
 
+            {{#if isOwner}}
             <div>
                 <a href="/movies/{{movie.id}}/attach" class="details">Attach</a>
                 <a href="/movies/{{movie.id}}/edit" class="details">Edit</a>
                 <a href="/movies/{{movie.id}}/delete" class="details">Delete</a>
             </div>
+            {{/if}}
 
         </div>
         <div class="card_right">
@@ -45,7 +47,7 @@
 
         <div class="cast-card">
             <div class="card-img">
-                 <img src="{{artist.imageUrl}}" alt="{{artist.name}}">
+                <img src="{{artist.imageUrl}}" alt="{{artist.name}}">
             </div>
             <div class="cast-info">
                 <h1>{{artist.name}}</h1>

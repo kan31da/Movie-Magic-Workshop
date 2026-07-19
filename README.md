@@ -143,13 +143,13 @@ Workshop
  - [x] Add isGuest guard
  
 ### Edit and Delete Movies
- - [ ] Add user movies relation
- - [ ] Add owner on movie create
- - [ ] Show dynamic details buttons
- - [ ] Implement delete button
- - [ ] Add static edit page
- - [ ] Add dynamic values to edit page
- - [ ] Implement edit on post
+ - [x] Add user movies relation
+ - [x] Add owner on movie create
+ - [x] Show dynamic details buttons
+ - [x] Implement delete button
+ - [x] Add static edit page
+ - [x] Add dynamic values to edit page
+ - [x] Implement edit on post
 
 ### Dynamic Navigation
  - [ ] Show dynamic navigation based on user session
