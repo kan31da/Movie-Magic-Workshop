@@ -1,23 +1,23 @@
 import { Router } from 'express';
 import movieService from '../services/movieService.js';
 import artistService from '../services/artistService.js'
+import { isAuth } from '../middlewares/authMiddleware.js';
 
 const movieController = Router();
 
-movieController.get('/create', (req, res) => {
-    res.render('movies/create', { title: 'Create Movie' });
-});
-
 movieController.get('/search', async (req, res) => {
     const filter = req.query || '';
-
+    
     const movies = await movieService.getAll(filter);
-
+    
     res.render('movies/search', { title: 'Search Results', movies: movies, filter: filter || '' });
 });
 
+movieController.get('/create', isAuth,(req, res) => {
+    res.render('movies/create', { title: 'Create Movie' });
+});
 
-movieController.post('/create', async (req, res) => {
+movieController.post('/create', isAuth, async (req, res) => {
     const newMovie = req.body;
 
     await movieService.create(newMovie);
@@ -38,7 +38,7 @@ movieController.get('/:movieId', async (req, res) => {
     res.render('movies/details', { title: 'Movie Details', movie, stars });
 });
 
-movieController.get('/:movieId/attach', async (req, res) => {
+movieController.get('/:movieId/attach', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
 
     const movie = await movieService.getById(movieId);
@@ -48,7 +48,7 @@ movieController.get('/:movieId/attach', async (req, res) => {
     res.render('movies/attach', { title: 'Attach Movie', movie, artists });
 });
 
-movieController.post('/:movieId/attach', async (req, res) => {
+movieController.post('/:movieId/attach', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
     const artistId = req.body.artist;
 
@@ -58,7 +58,7 @@ movieController.post('/:movieId/attach', async (req, res) => {
 });
 
 
-movieController.delete('/delete/:movieId', async (req, res) => {
+movieController.delete('/delete/:movieId', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
     await movieService.deleteById(movieId);
     res.redirect('/');

@@ -12,8 +12,17 @@ async function register(userData) {
     return user;
 }
 
+async function findByEmail(email) {
+    const user = await prisma.user.findUnique({
+        where: { email: email },
+    });
+
+    return user;
+}
+
 const authRepository = {
     register,
+    findByEmail,
 }
 
 export default authRepository;

@@ -120,27 +120,27 @@ Workshop
  - [x] Add service
  - [x] Add repository
  - [x] Add model
- - [ ] Hash password `npm i bcrypt`
+ - [x] Hash password `npm i bcrypt`
 
 ### Login
- - [ ] Add login page
- - [ ] Add login post action
- - [ ] Add login service method
- - [ ] Add findByEmail repository method
- - [ ] Validate password
- - [ ] Issue JWT token `npm i jsonwebtoken`
- - [ ] Return token in cookie
+ - [x] Add login page
+ - [x] Add login post action
+ - [x] Add login service method
+ - [x] Add findByEmail repository method
+ - [x] Validate password
+ - [x] Issue JWT token `npm i jsonwebtoken`
+ - [x] Return token in cookie
 
 ### Logout
  - [ ] Add logout action
  - [ ] Use logout on invalid token
 
 ### Authentication & Authorization
- - [ ] Create auth middleware
- - [ ] Setup cookie parser
- - [ ] Validate token
- - [ ] Add isAuthenticated guard
- - [ ] Add isGuest guard
+ - [x] Create auth middleware
+ - [x] Setup cookie parser
+ - [x] Validate token
+ - [x] Add isAuthenticated guard
+ - [x] Add isGuest guard
  
 ### Edit and Delete Movies
  - [ ] Add user movies relation
