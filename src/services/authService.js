@@ -1,16 +1,20 @@
 import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken'
-import { prisma } from "../lib/prisma";
+
 import authRepository from "../repositories/userRepository";
+import { generateAuthToken } from '../utils/tokenUtils'
 
 async function register(userData) {
 
     const hashPassword = await bcrypt.hash(userData.password, 10);
 
-    return await authRepository.register({
+    const user = await authRepository.register({
         ...userData,
         password: hashPassword
     });
+
+    const token = generateAuthToken(user);
+
+    return token;
 }
 
 async function login(userData) {
@@ -27,10 +31,7 @@ async function login(userData) {
         throw new Error('Invalid Password');
     }
 
-    const payload = { userId: user.id, email: user.email };
-    const secret = 'mySecretSecret';
-
-    const token = jwt.sign(payload, secret, { expiresIn: '1h' });
+    const token = generateAuthToken(user);
 
     return token;
 }
