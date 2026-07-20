@@ -8,10 +8,8 @@ export function authMiddleware(req, res, next) {
         return next();
     }
 
-    const secret = 'mySecretSecret';
-
     try {
-        const decodedToken = jwt.verify(token, secret);
+        const decodedToken = jwt.verify(token, process.env.AUTH_SECRET);
         req.user = decodedToken;
         res.locals.user = decodedToken;
 

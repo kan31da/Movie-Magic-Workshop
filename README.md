@@ -132,8 +132,8 @@ Workshop
  - [x] Return token in cookie
 
 ### Logout
- - [ ] Add logout action
- - [ ] Use logout on invalid token
+ - [x] Add logout action
+ - [x] Use logout on invalid token
 
 ### Authentication & Authorization
  - [x] Create auth middleware
@@ -157,7 +157,7 @@ Workshop
 ### Bonuses
  - [ ] Validate repeat password
  - [ ] Automatic login on register
- - [ ] Fix secret
+ - [x] Fix secret
  - [ ] Fix select on edit
  - [ ] Make token generation async
  - [ ] Fix rating
