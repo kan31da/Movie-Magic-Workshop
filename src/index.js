@@ -12,6 +12,11 @@ const app = express();
 app.engine('hbs', engine(
     {
         extname: 'hbs',
+        helpers: {
+            isSelected() {
+                return this.selected ? 'selected' : '';
+            }
+        },
         // defaultLayout: 'main',
         // layoutsDir: './src/views/layouts/',
     }

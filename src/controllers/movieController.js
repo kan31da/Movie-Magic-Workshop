@@ -59,13 +59,33 @@ movieController.post('/:movieId/attach', isAuth, async (req, res) => {
     res.redirect(`/movies/${movieId}`);
 });
 
+function prepareCategoryViewData(movie) {
+    const categories = ['TV Show', 'Animation', 'Movie', 'Documentary', 'Short Film'];
+
+    const categoryOptions = categories.map(category => {
+
+        const value = category.toLocaleLowerCase().replaceAll(' ', '-');
+
+        const option = {
+            value,
+            label: category,
+            selected: movie.category === value,// ? 'selected' : '', or app.engine helpers: isSelected()
+        };
+
+        return option;
+    });
+
+    return categoryOptions;
+}
+
 movieController.get('/:movieId/edit', isAuth, async (req, res) => {
     const movieId = Number(req.params.movieId);
     const userId = req.user.userId;
 
     const movie = await movieService.getById(movieId);
+    const categoryOptions = prepareCategoryViewData(movie);
 
-    res.render('movies/edit', { movie });
+    res.render('movies/edit', { movie, categoryOptions });
 });
 
 movieController.post('/:movieId/edit', isAuth, async (req, res) => {
