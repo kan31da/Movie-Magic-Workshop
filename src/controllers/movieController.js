@@ -58,12 +58,17 @@ movieController.post('/create', isAuth, async (req, res) => {
         } else if (error.name === 'PrismaClientKnownRequestError') {
 
             switch (error.code) {
+
                 case 'P2002':
                     errors = { title: ['Title must be unique'] };
                     break;
+
                 case 'P2003':
                     errors = { category: ['Invalid category'] };
                     break;
+
+                default:
+                    errorMessage = e`Database error happened: Code ${error.code}`;
             }
 
         } else {
