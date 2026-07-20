@@ -12,6 +12,12 @@
 
     <div id="box">
 
+        {{#if error}}
+        <div class="error-container">
+            <P>{{error}}</P>
+        </div>
+        {{/if}}
+
         <nav>
             <img src="/img/logo.webp" alt="logo">
 

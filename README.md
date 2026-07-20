@@ -161,3 +161,30 @@ Workshop
  - [x] Fix select on edit
  - [ ] Make token generation async
  - [ ] Fix rating
+
+ ## Workshop 4 - Validation and Error Handling
+
+ - [ ] Add resources
+
+### Movie validation and error handling
+ - [x] Create Movie Scheme with Zod
+ - [x] Catch, extract and return errors
+ - [x] Populate already filled data
+ - [x] Populate select category
+ - [x] Show single error
+ - [x] Validate enum (movie category)
+ - [x] Show multiple errors
+ - [x] Get prisma errors
+
+### Artist validation and error handling
+ - [ ] Create schema
+ - [ ] Validate on create
+ - [ ] Get error message
+
+### User validation and error handling
+ - [ ] Validate User
+ - [ ] Validate repeat password
+ - [ ] Validate unique email (async validation)
+
+### Bonus
+ - [ ] Fix dynamic page titles
