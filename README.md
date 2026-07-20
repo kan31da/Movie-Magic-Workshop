@@ -164,7 +164,7 @@ Workshop
 
  ## Workshop 4 - Validation and Error Handling
 
- - [ ] Add resources
+ - [x] Add resources
 
 ### Movie validation and error handling
  - [x] Create Movie Scheme with Zod
