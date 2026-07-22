@@ -5,7 +5,7 @@ import { generateAuthToken } from '../utils/tokenUtils'
 
 async function register(userData) {
 
-    const hashPassword = await bcrypt.hash(userData.password, 10);
+    const hashPassword = await bcrypt.hash(userData.password, 10);//TODO TODO TODO
 
     const user = await authRepository.register({
         ...userData,

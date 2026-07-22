@@ -31,4 +31,4 @@ export const createUserSchema = z.object({
         ...data,
         password: hashedPassword,
     }
-})
+});

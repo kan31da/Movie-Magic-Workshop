@@ -68,7 +68,7 @@ movieController.post('/create', isAuth, async (req, res) => {
                     break;
 
                 default:
-                    errorMessage = e`Database error happened: Code ${error.code}`;
+                    errorMessage = `Database error happened: Code ${error.code}`;
             }
 
         } else {

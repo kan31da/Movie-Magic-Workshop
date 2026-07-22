@@ -182,9 +182,9 @@ Workshop
  - [x] Get error message
 
 ### User validation and error handling
- - [ ] Validate User
- - [ ] Validate repeat password
- - [ ] Validate unique email (async validation)
+ - [x] Validate User
+ - [x] Validate repeat password
+ - [x] Validate unique email (async validation)
 
 ### Bonus
  - [ ] Fix dynamic page titles
